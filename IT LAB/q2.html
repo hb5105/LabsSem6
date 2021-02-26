@@ -1,0 +1,55 @@
+<html>    
+    <head>    
+    <title>CALCULATOR</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
+    <script>     
+        $(document).ready(function(){    
+            $("#Add").on('click',function(){ 
+                Add();    
+            });    
+            $("#Sub").on('click',function(){    
+                Substract();    
+            })    
+            $("#Mul").on('click',function(){    
+                Multiply();    
+            })    
+            $("#Div").on('click',function(){    
+                Divide();    
+            })    
+        });
+
+        function Add(){    
+         var a=parseInt($("#noa").val());    
+         var b=parseInt($("#nob").val());    
+         var result =a+b;    
+          alert("The result is "+result);    
+        }    
+        function Substract(){    
+         var a=parseInt($("#noa").val());    
+         var b=parseInt($("#nob").val());    
+         var result =a-b;    
+          alert("The result is "+result);    
+        }    
+        function Multiply(){    
+         var a=parseInt($("#noa").val());    
+         var b=parseInt($("#nob").val());    
+         var result =a*b;    
+          alert("The result is "+result);    
+        }    
+        function Divide(){    
+         var a=parseInt($("#noa").val());    
+         var b=parseInt($("#nob").val());    
+         var result =a/b;    
+          alert("The result is "+result);    
+        }    
+    </script>    
+    </head>    
+    <body>    
+       First  Number <input type="text" id="noa" placeholder="Enter value of first number" style="padding: 10px"><br>    
+       Second Number <input type="text" id="nob" placeholder="Enter value of second number" style="padding: 10px "><br>    
+        <input type="button" id="Add" value="Add" style="padding: 10px ">    
+        <input type="button" id="Sub" value="Substract" style="padding: 10px ">    
+        <input type="button" id="Mul" value="Multiply" style="padding: 10px ">    
+        <input type="button" id="Div" value="Divide" style="padding: 10px ">    
+    </body>    
+    </html>  

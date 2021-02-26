@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<title>Exercise 4</title>
+<style>
+.dropmenu1{
+margin-bottom:30px;
+display: block;
+padding: 5px 10px;
+font-size: 1.4rem;
+outline: none;
+}
+#bigbox{
+width: 60%;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(()=>{
+let mVal = 0;
+let lVal = 0;
+$("#checkBox").hide();
+$("#quantLap").hide();
+$("#quantMob").hide();
+$(".dropmenu1").change(() => {
+$("#checkBox").show();
+});
+$("#mobOp").change(()=>{
+if(mVal === 0){
+$("#quantMob").show();
+
+mVal++;
+}
+else{
+$("#quantMob").hide();
+mVal = 0;
+}
+});
+$("#lapOp").change(()=>{
+if(lVal === 0){
+$("#quantLap").show();
+lVal++;
+}
+else{
+$("#quantLap").hide();
+lVal = 0;
+}
+});
+let vals = {
+"hp":{
+"mobile": 6000,
+"laptop": 67700
+},
+"nokia":{
+"mobile": 7890,
+"laptop": 58900
+},
+"samsung":{
+"mobile": 9009,
+"laptop": 74500
+},
+"motorola":{
+"mobile": 7345,
+"laptop": 88550
+},
+"apple":{
+"mobile": 9870,
+"laptop": 99000
+},
+}
+$('#btn1').click(()=>{
+let company = $(".dropmenu1 option:selected").val();
+let mobVal = $("input[name='mobBox']:checked").val();
+
+let lapVal = $("input[name='lapBox']:checked").val();
+let mobQu = parseInt($("#mobQuant").val());
+let lapQu = parseInt($("#lapQuant").val());
+if(mobVal && lapVal){
+let finalExpense = mobQu*(vals[company].mobile) +
+lapQu*(vals[company].laptop);
+alert("Price of 1 mobile: " + vals[company].mobile + "\nPrice of 1 laptop: "+ vals[company].laptop+"\nFinal price of all "+company+" products: "+
+finalExpense);
+}
+else if(mobVal){
+let finalExpense = mobQu*(vals[company].mobile);
+alert("Price of 1 mobile: " + vals[company].mobile + "\nFinal price of all"+company+" products: "+ finalExpense);
+}
+else if(lapVal){
+let finalExpense = lapQu*(vals[company].laptop);
+alert("Price of 1 laptop: " + vals[company].laptop + "\nFinal price of all"+company+" products: "+ finalExpense);
+}
+else{
+alert("Enter all necessary fields");
+}
+});
+})
+</script>
+</head>
+<body>
+<div id="bigbox">
+<div id="firstbox">
+<p class="para">Choose a vendor:</p>
+<select class="dropmenu1">
+<option value="hp">HP</option>
+<option value="nokia">Nokia</option>
+<option value="samsung">Samsung</option>
+<option value="motorola">Motorola</option>
+<option value="apple">Apple</option>
+</select>
+<div id="checkBox">
+<input type = "checkbox" id = "mobOp" value = "mobile"
+name="mobBox" /> Mobile <br>
+<input type = "checkbox" id = "lapOp" value = "laptop" name="lapBox" />
+Laptop <br>
+</div>
+
+<div id="quantMob">
+<p class="para">Enter quantity of mobiles:</p>
+<input type="input" id="mobQuant" placeholder="Enter quantity ...">
+</div>
+<div id="quantLap">
+<p class="para">Enter quantity of laptops:</p>
+<input type="input" id="lapQuant" placeholder="Enter quantity ...">
+</div>
+<button id="btn1">Produce bill</button>
+</div>
+</div>
+
+</body>
+</html>

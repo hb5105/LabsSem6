@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type = "text/javascript" language = "javascript">
+		$(document).ready(function(){
+			$(".btn").click(function(){
+				$("div").animate({left:"0px"})
+			})
+		})
+		
+	</script>
+	 <style type="text/css">
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    .main-container{
+      display: flex;
+      flex-direction: column;
+
+    }
+    .sub-container{
+      position: relative;
+      left: 250px;
+    }
+  </style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="sub-container">
+			<table>
+				<tr>
+					<th>FRUIT</th>
+					<th>COLOUR</th>
+					<TH>PRICE</TH>
+				</tr>
+				<tr>
+					<td>Apple</td>
+					<td>Red</td>				
+					<td>190/kg </td>
+				</tr>
+				<tr>
+					<td>Grapes</td>
+					<td>Green</td>				
+					<td>90/kg </td>
+				</tr>
+			</table>
+			
+		<div class="image">
+        <img src="apple.jpg" alt="apple" width="300" height="300">
+      </div>
+		<div class="btn">
+      <button type="button">Click here</button>
+    </div>
+	</div>
+	</div>
+</body>
+</html>

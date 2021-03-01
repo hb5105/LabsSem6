@@ -10,26 +10,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<label>Name:</label>
-			<input type="text" class="form-control"id="usr">
+	
+
+		<div class="row" style="background-color: green;height:350px;">
+			<h1>_STUDENT INFORMATION: <span class="badge badge-primary">student</span></h1>
+			<h1 style=" margin-left:0px; margin-top:100px;">Name:</h1>
+			<input type="text" style="margin-left:50px; margin-top:110px; height:40px; width:150px;">
 		</div>
 
-		<div class="row">
+		<div class="row" style="height:350px">
 			
 		
-		<div class="col-4">
+		<div class="col-sm" style="background-color:skyblue;">
 			<div class="radio">
-		<label>Gender:</label>
+		 <h1>Gender<span class="badge badge-warning">G</span></h1>
+		 <br>
 		<label><input type="radio" name="optradio" checked>Male</label>
 		<label><input type="radio" name="optradio" checked>Female</label>
 			</div>
 			
 		</div>
-		<div class="col-4">
+		<div class="col-sm" style="background-color:yellow;">
 			<table class="table-bordered table-striped">
-		<h5>SUBJECTS TAKEN:</h5>
+		 <h1>Subjects Taken:<span class="badge badge-secondary">S</span></h1><br>
 		<tr>
 			<th> SELECT </th>
 			<th> COURSE NAME </th>
@@ -57,13 +60,14 @@
 	</table>
 			
 		</div>
-		<div class="col-4">
-			<label>About you</label>
-			<input type="text" class="form-control"id="usr">
-			
+		<div class="col-sm"  style="background-color:red;">
+			<h1>About you:<span class="badge badge-success">A</span></h1>
+			 <textarea class="form-control" rows="7" id="comment"></textarea>
+			 <br>
+			 <button type="button" class="btn">Submit</button>
 		</div>
 		</div>
-	</div>
+
 
 </body>
 </html>

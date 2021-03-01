@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student biodata form</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<form action="/action_page.php">
+	<div class="form-group">
+		<label>Name:</label>
+		<input type="text" class="form-control"id="usr">
+		<label>Semester:</label>
+		<input type="text" class="form-control"id="sem">
+	</div>
+	<br>
+	<div class="radio">
+		<label>Gender:</label>
+		<label><input type="radio" name="optradio" checked>Male</label>
+		<label><input type="radio" name="optradio" checked>Female</label>
+	</div>
+	<br>
+	<table class="table table-bordered table-striped">
+		<h5>SUBJECTS TAKEN:</h5>
+		<tr>
+			<th> SELECT </th>
+			<th> COURSE NAME </th>
+			<th> CODE </th>
+			
+		</tr>
+		<tr>
+			<td><input type="checkbox" value=""></td>
+			<td>DSA</td>
+			<td>CSE 101</td>
+			
+		</tr>
+		<tr>
+			<td><input type="checkbox" value=""></td>
+			<td>DSD</td>
+			<td>CSE 102</td>
+			
+		</tr>
+		<tr>
+			<td><input type="checkbox" value=""></td>
+			<td>COA</td>
+			<td>CSE 102</td>
+			
+		</tr>
+	</table>
+	<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+</body>
+</html>

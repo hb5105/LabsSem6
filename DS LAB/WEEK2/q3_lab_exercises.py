@@ -20,7 +20,7 @@ else:
 
 print("\nQuestion 4")
 a=int(input("enter no1 "))
-b=int(input("enter no2"))
+b=int(input("enter no2 "))
 c=int(input("enter no3 "))
 a=a if a>b and a>c else b if b>a and b>c else c
 print(a," is the largest of the 3")
@@ -116,12 +116,10 @@ print()
 print("\nQuestion 13")
 a=[11,-21,0,45,66,-93]
 print("the list is ",a)
-print("after removing all elements")
-a.clear()
+print("after removing all even elements")
+b=a
+for i in b:
+	if i%2==0:
+		a.remove(i)
 print(a)
 print()
-
-print("\nQuestion 14")
-
-print("\nQuestion 15")
-

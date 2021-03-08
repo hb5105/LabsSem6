@@ -4,5 +4,5 @@ x.sort()
 a=""
 for i in x:
 	a=a+i+" "
-print(a)
+print("reversed string is:\n",a)
 

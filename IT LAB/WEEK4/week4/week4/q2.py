@@ -1,5 +1,5 @@
-class Map:
-    def pairs():
+class Pair:
+    def pairs(self):
         flag=0
         a=input("enter a list of numbers\n").split(' ')
         targ=int(input("enter target value:\n"))
@@ -12,8 +12,7 @@ class Map:
         if(flag==0):
             print("no such pair exists")
 
-
-
-    pairs()
+ob=Pair()
+ob.pairs()
 
 

@@ -1,8 +1,9 @@
 class Poww:
-    def poww(a, b):
+    def poww(self,a, b):
         res=a**b
         return res
 
-    x=int(input("enter number x\n"))
-    n=int(input("enter number n\n"))
-    print("pow(",x,",",n,") : ",poww(x,n))
+x=int(input("enter number x\n"))
+n=int(input("enter number n\n"))
+ob=Poww()
+print("pow(",x,",",n,") : ",ob.poww(x,n))

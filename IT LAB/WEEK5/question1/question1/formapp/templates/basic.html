@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Marks</title>
+</head>
+<body>
+    <script type="text/javascript">function myfunc(){
+    var name = document.getElementById("name").value;
+    var dob = document.getElementById("dob").value;
+    var add = document.getElementById("address").value;
+    var ph = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var phy = document.getElementById("phy").value;
+    var chem = document.getElementById("chem").value;
+    var eng = document.getElementById("eng").value;
+    var val = parseFloat(phy) + parseFloat(chem) + parseFloat(eng);
+    console.log(val);
+    val = val/3;
+    console.log(val);
+    var s = "Name : "+name + "\nDOB : "+dob+ "\nAddress : "+add+"\nContact Number : "+ph+"\nEmail : "+email;
+    document.getElementById("txt").value = s;
+    document.getElementById("para1").innerHTML = "Percentage is "+val;
+
+}</script>
+    Enter Name: <input type="text" id="name"><br>
+    Enter DOB: <input type="text" id="dob"><br>
+    Enter Address : <input type="text" id="address"><br>
+    Enter Number: <input type="text" id="phone"><br>
+    Enter Email: <input type="text" id="email"><br>
+    Enter Phy marks: <input type="text" id="phy"><br>
+    Enter Chem marks: <input type="text" id="chem"><br>
+    Enter Eng marks: <input type="text" id="eng"><br>
+    <button onclick="myfunc()">View</button><br\>
+        <br /><br />
+        Details : <textarea id="txt" rows="10" cols="20"></textarea>
+        <p id="para1"></p>
+</body>
+</html>

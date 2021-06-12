@@ -45,21 +45,4 @@ int main(int argc, char const *argv[])
 	MPI_Bcast(&m,1,MPI_INT,0,MPI_COMM_WORLD);
 	
 	MPI_Scatter(a,m,MPI_CHAR,b,m,MPI_CHAR,0,MPI_COMM_WORLD);
-	MPI_Scatter(a1,m,MPI_CHAR,b1,m,MPI_CHAR,0,MPI_COMM_WORLD);
-	
-	char* tt=(char *)calloc(100,sizeof(char));
-	strcpy(tt,mixed(b,b1));
-	printf("process %d: mixed string is: %s\n",rank,tt);
-
-	MPI_Gather(tt,2*m,MPI_CHAR,c,2*m,MPI_CHAR,0,MPI_COMM_WORLD);
-	
-	if (rank==0)
-	{	
-		c[n]='\0';
-		printf("process %d: final mixed string is: %s\n",rank,c);
-
-	}
-
-	MPI_Finalize();
-	return 0;
-}
+	MPI_Scatter(a1,m,MPI_CHAR,b1,m,MPI
